@@ -9,6 +9,7 @@ class UassetGuiToolInfo(cache.ToolInfo):
     tool_name: str = "uasset_gui"
     repo_name: str = "UAssetGUI"
     repo_owner: str = "atenfyr"
+    file_paths: list[str] = ['UAssetGUI.exe']
 
 
     def get_executable_name(self) -> str:
