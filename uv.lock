@@ -129,10 +129,11 @@ wheels = [
 [[package]]
 name = "tempo-cache"
 version = "0.1.0"
-source = { git = "https://www.github.com/Tempo-Organization/tempo-cache#73d54d0e4efbf5d1beb9c9e19587d99f6c302785" }
+source = { git = "https://www.github.com/Tempo-Organization/tempo-cache#4ef4099ba7165843a678507007e21c7fa7734dce" }
 dependencies = [
     { name = "platformdirs" },
     { name = "requests" },
+    { name = "tempo-settings" },
     { name = "tomlkit" },
 ]
 
@@ -150,6 +151,11 @@ requires-dist = [
     { name = "packaging", specifier = ">=26.1" },
     { name = "tempo-cache", git = "https://www.github.com/Tempo-Organization/tempo-cache" },
 ]
+
+[[package]]
+name = "tempo-settings"
+version = "0.1.0"
+source = { git = "https://www.github.com/Tempo-Organization/tempo-settings#0cdabc4e19b3c287c041972eb47d4704becb99dc" }
 
 [[package]]
 name = "tomlkit"
