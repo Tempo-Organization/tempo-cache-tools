@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from tempo_cache import cache
+from tempo_binary_tool_manager import manager
 
 
 @dataclass
-class UassetGuiToolInfo(cache.ToolInfo):
+class UassetGuiToolInfo(manager.ToolInfo):
     tool_name: str = "uasset_gui"
     repo_name: str = "UAssetGUI"
     repo_owner: str = "atenfyr"
@@ -13,14 +13,14 @@ class UassetGuiToolInfo(cache.ToolInfo):
 
 
     def get_executable_name(self) -> str:
-        if cache.is_windows():
+        if manager.is_windows():
             return 'UAssetGUI.exe'
         else:
             raise ValueError('unsupported os')
 
 
     def get_file_to_download(self) -> str:
-        if cache.is_windows():
+        if manager.is_windows():
             return 'UAssetGUI.exe'
         else:
             raise ValueError('unsupported os')

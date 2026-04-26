@@ -1,5 +1,5 @@
 [project]
-name = "tempo-cache-tools"
+name = "tempo-binary-tools"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -9,15 +9,26 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "packaging>=26.1",
-    "tempo-cache",
+    "tempo-binary-tool-manager",
 ]
 
 [project.scripts]
-tempo-cache-tools = "tempo_cache_tools:main"
+tempo-binary-tools = "tempo_binary_tools:main"
 
 [build-system]
 requires = ["uv_build>=0.9.26,<0.10.0"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
-tempo-cache = { git = "https://www.github.com/Tempo-Organization/tempo-cache" }
+tempo-binary-tool-manager = { git = "https://www.github.com/Tempo-Organization/tempo-binary-tool-manager" }
+
+[dependency-groups]
+dev = [
+    "prek>=0.3.10",
+    "ruff>=0.15.12",
+    "ty>=0.0.32",
+]
+
+[tool.typos]
+[tool.typos.default]
+extend-words = { ue = "ue" }
